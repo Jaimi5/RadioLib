@@ -1109,7 +1109,7 @@ class LR11x0: public PhysicalLayer {
       \param len Only for PhysicalLayer compatibility, not used.
       \returns \ref status_codes
     */
-    int16_t startReceive(uint32_t timeout, uint32_t irqFlags = RADIOLIB_LR11X0_IRQ_RX_DONE, uint32_t irqMask = 0, size_t len = 0);
+    int16_t startReceive(uint32_t timeout, uint32_t irqFlags = RADIOLIB_LR11X0_IRQ_RX_DONE, uint32_t irqMask = 0, size_t len = 0) override;
 
     /*!
       \brief Reads the current IRQ status.

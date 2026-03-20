@@ -713,7 +713,7 @@ class SX126x: public PhysicalLayer {
       \param len Only for PhysicalLayer compatibility, not used.
       \returns \ref status_codes
     */
-    int16_t startReceive(uint32_t timeout, RadioLibIrqFlags_t irqFlags = RADIOLIB_IRQ_RX_DEFAULT_FLAGS, RadioLibIrqFlags_t irqMask = RADIOLIB_IRQ_RX_DEFAULT_MASK, size_t len = 0);
+    int16_t startReceive(uint32_t timeout, RadioLibIrqFlags_t irqFlags = RADIOLIB_IRQ_RX_DEFAULT_FLAGS, RadioLibIrqFlags_t irqMask = RADIOLIB_IRQ_RX_DEFAULT_MASK, size_t len = 0) override;
 
     /*!
       \brief Interrupt-driven receive method where the device mostly sleeps and periodically wakes to listen.
